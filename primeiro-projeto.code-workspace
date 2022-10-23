@@ -1,8 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "primeiro-projeto"
-		}
+            "name": "primeiro-projeto",
+			"path": "D:/cursoAngularLoiane/cursoAngularLG/primeiro-projeto"
+		},
+        {
+                "name": "data-binding",
+                "path": "D:/cursoAngularLoiane/cursoAngularLG/data-binding"
+        }
     ],
     "settings": {}
 }
