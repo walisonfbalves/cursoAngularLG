@@ -1,4 +1,4 @@
-<section class="property-binding">
+<!-- <section class="property-binding">
   <article>
     <h3>Interpolation/Interpolação</h3>
     <p> String renderizada com interpolação: {{ url }}</p>
@@ -8,10 +8,52 @@
   </article>
   <article>
     <h3>Property Binding</h3>
-    <img src="{{urlImagem}}">
-    <!-- diferença de fazer -->
-    <img [src]="urlImagem" style ='margin-left: 50px'>
-    <!-- formato padrão -->
-    <img bind-src="urlImagem" style ='margin-left: 50px'>
+    <img src="{{urlImagem}}"> -->
+<!-- diferença de fazer -->
+<!--    <img [src]="urlImagem" style ='margin-left: 50px'> -->
+<!-- formato padrão -->
+<!--   <img bind-src="urlImagem" style ='margin-left: 50px'>
+  </article>
+</section>
+ -->
+
+<section class="class styleBindging">
+  <article>
+    <h3>Class e StyleBinding</h3>
+    <div>
+      Selecione uma classe:
+      <select #classe (change)="0">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-warning">Cuidado</option>
+        <option value="alert-info">Informativo</option>
+        <option value="alert-danger">Error</option>
+      </select>
+      <br><br>
+      <!-- Class Binding -->
+
+      <div class="alert {{ classe.value }} " role="alert">
+        O texto muda de acordo com o comonbox
+      </div>
+
+      <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+        A simple success alert—check it out!
+      </div>
+      <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
+        A simple warning alert—check it out!
+      </div>
+      <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">
+        A simple info alert—check it out!
+      </div>
+      <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
+        A simple danger alert—check it out!
+      </div>
+      <!-- Style Binding -->
+
+      <div class="alert alert-danger" role="alert"
+      [style.display]="classe.value == 'alert-danger' ? 'block' : 'none' ">
+        Só aparecer se for menssagem de error
+      </div>
+
+    </div>
   </article>
 </section>
