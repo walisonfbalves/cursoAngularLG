@@ -17,7 +17,7 @@
 </section>
  -->
 
-<section class="class styleBindging">
+<!-- <section class="class styleBindging">
   <article>
     <h3>Class e StyleBinding</h3>
     <div>
@@ -29,7 +29,7 @@
         <option value="alert-danger">Error</option>
       </select>
       <br><br>
-      <!-- Class Binding -->
+      Class Binding
 
       <div class="alert {{ classe.value }} " role="alert">
         O texto muda de acordo com o comonbox
@@ -47,7 +47,7 @@
       <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
         A simple danger alert—check it out!
       </div>
-      <!-- Style Binding -->
+      Style Binding
 
       <div class="alert alert-danger" role="alert"
       [style.display]="classe.value == 'alert-danger' ? 'block' : 'none' ">
@@ -56,4 +56,34 @@
 
     </div>
   </article>
+</section> -->
+
+<section>
+
+  <article>
+    <h3> Event binding </h3>
+    <div>
+      <button (click)="botaoClicado()"
+              class="btn btn-primary"> Me clique</button>
+
+      <br><br>
+
+      <input type="text"
+             #variavelLocal
+             (keyup)="onKeyUp($event)"
+             (keyup.enter)="onKeyUpEnter(variavelLocal)"
+             (blur)="onKeyUpEnter(variavelLocal)">
+      <br><br>
+      <p>Valor evento keyup : {{ valorInput }}</p>
+      <p>Valor evento keyup.enter ou blur: {{ valorSalvoInput }}</p>
+
+      <span (mouseover)="mouseEvent()"
+         (mouseout)="mouseEvent()"
+         [class.highlight]="valorMouse">
+        Passe o mouse sobre mim
+      </span>
+    </div>
+
+  </article>
+
 </section>

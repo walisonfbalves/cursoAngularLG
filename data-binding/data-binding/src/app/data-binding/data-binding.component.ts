@@ -11,6 +11,9 @@ export class DataBindingComponent implements OnInit {
   cursoAngular: boolean = true
   urlImagem: string = 'http://lorempixel.com.br/300/300'
 
+  valorInput: string = '';
+  valorSalvoInput: string = '';
+  valorMouse: boolean = false;
 
   constructor() { }
 
@@ -24,4 +27,21 @@ export class DataBindingComponent implements OnInit {
   getCursoAngular() {
     return true;
   }
+
+  botaoClicado()  {
+    alert('Botão clicado')
+  }
+
+  onKeyUp(evento: KeyboardEvent) {
+    this.valorInput = (<HTMLInputElement>evento.target).value;
+  }
+
+  onKeyUpEnter(valor: any) {
+    this.valorSalvoInput = valor.value
+  }
+
+  mouseEvent() {
+    this.valorMouse = !this.valorMouse;
+  }
+
 }
