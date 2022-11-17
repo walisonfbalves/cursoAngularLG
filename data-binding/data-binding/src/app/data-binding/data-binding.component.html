@@ -95,5 +95,6 @@
     <h3>Input/Output properties</h3>
     <app-input-property [nome] = 'nomeDoCurso'></app-input-property>
 
+    <app-output-property [valor]="10" (mudouValor)="mudouValor($event)"></app-output-property>
   </article>
 </section>

@@ -48,5 +48,8 @@ export class DataBindingComponent implements OnInit {
     this.valorMouse = !this.valorMouse;
   }
 
+  mudouValor(evento: any) {
+    console.log(evento.novoValor)
+  }
 
 }
