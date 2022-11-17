@@ -10,6 +10,7 @@ export class DataBindingComponent implements OnInit {
   url: string = "instagran/wfbalves";
   cursoAngular: boolean = true
   urlImagem: string = 'http://lorempixel.com.br/300/300'
+  nomeDoCurso: string = 'Angular'
 
   valorInput: string = '';
   valorSalvoInput: string = '';
