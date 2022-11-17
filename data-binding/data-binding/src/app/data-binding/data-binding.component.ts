@@ -14,6 +14,9 @@ export class DataBindingComponent implements OnInit {
   valorInput: string = '';
   valorSalvoInput: string = '';
   valorMouse: boolean = false;
+  valorClicado: string = '';
+
+
 
   constructor() { }
 
@@ -43,5 +46,6 @@ export class DataBindingComponent implements OnInit {
   mouseEvent() {
     this.valorMouse = !this.valorMouse;
   }
+
 
 }
