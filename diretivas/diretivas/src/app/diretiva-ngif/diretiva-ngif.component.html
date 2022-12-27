@@ -1,0 +1,31 @@
+<h2>*ngIf</h2>
+
+<p *ngIf="cursos.length > 0">
+  {{cursos}}
+</p>
+
+<p *ngIf="cursos.length == 0">
+  Não existem cursos para serem listado.
+</p>
+
+<p *ngIf="mostrarCursos">
+    Tem cursos
+</p>
+
+<p *ngIf="!mostrarCursos">
+  Não existem cursos para serem listados.
+</p>
+
+<button (click)="mostrarCursosBtn()"> Mostrar ou esconder cursos </button>
+
+<br>
+
+<h2> hidden como alternativa</h2>
+
+<p [hidden]="!mostrarCursos">
+  Lista de cursos'
+</p>
+
+<p [hidden]="mostrarCursos">
+  Não existem cursos para serem listados
+</p>
