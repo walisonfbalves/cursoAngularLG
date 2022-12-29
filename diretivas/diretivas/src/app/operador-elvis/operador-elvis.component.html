@@ -1,0 +1,11 @@
+<p>Tafera: {{ tarefa.desc }}</p>
+<!-- <p>Responsável: {{ tarefa.responsa.nome }}</p> -->
+
+<!-- muito código -->
+<p>Responsável: {{ tarefa.responsa != null ? tarefa.response.nome : '' }}</p>
+
+<!-- maneira de usar no angular -->
+
+<p>Responsável: {{ tarefa.responsa?.nome }}</p>
+
+
