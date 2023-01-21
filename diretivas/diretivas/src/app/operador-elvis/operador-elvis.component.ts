@@ -9,8 +9,12 @@ export class OperadorElvisComponent implements OnInit {
 
   tarefa: any = {
     desc: "Jogar dota 2 daqui a pouco",
-    responsa: null
-    // respon
+    responsa: null,
+    testando: {
+        test: {
+          testDotest: null,
+        }
+    }
   }
 
   constructor() { }
